@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+
+<h:body>
+
+
+			<h:form name="login" >
+
+			
+				<h3>Login your account below :</h3>
+    
+      <div>
+      <p:column>      
+      <p:outputLabel>Username  </p:outputLabel>
+      <p:inputText id="input" value="#{clientBean.client.username}"  required="true"  requiredMessage="This field is required."/>
+      <p:message for="input"/>
+      </p:column>
+      </div>
+
+      <div>
+      <p:column>
+      <p:outputLabel>Password  </p:outputLabel>
+      <p:inputText id="pass" value="#{clientBean.client.password}"  required="true"  requiredMessage="This field is required."/>
+      <p:message for="pass"/>
+      </p:column>
+      </div>
+
+ 
+   
+      <div>
+      <p:column>
+      <p:commandButton   value="Login" action="#{clientBean.validate}" /> 
+      </p:column>
+      </div>
+				
+			</h:form>
+
+		
+</h:body>
+</html>

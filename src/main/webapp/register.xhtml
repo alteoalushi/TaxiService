@@ -1,0 +1,82 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+</h:head>
+
+<h:body>
+			<h:form name="register" >
+
+				<h3>Register with your data below :</h3>
+		
+      <div>
+      <p:column>      
+      <p:outputLabel>First Name  </p:outputLabel>
+      <p:inputText id="input-fn" value="#{clientBean.client.firstName}"  required="true"  requiredMessage="This field is required."/>
+      <p:message for="input-fn"/>
+      </p:column>
+      </div>
+
+      <div>
+      <p:column>
+      <p:outputLabel>Last Name  </p:outputLabel>
+      <p:inputText id="input-ln" value="#{clientBean.client.lastName}"  required="true"  requiredMessage="This field is required."/>
+      <p:message for="input-ln"/>
+      </p:column>
+      </div>
+      
+      <div>
+      <p:column>
+      <p:outputLabel>Username : </p:outputLabel>
+      <p:inputText id="input-un" value="#{clientBean.client.username}"  required="true"  requiredMessage="This field is required."/>
+      <p:message for="input-un"/>
+      </p:column>
+      </div>
+
+      <div>
+      <p:column>
+      <p:outputLabel>Email  </p:outputLabel>
+      <p:inputText id="input-em" value="#{clientBean.client.email}" required="true"  requiredMessage="This field is required."/>
+      <p:message for="input-em"/>
+      </p:column>
+      </div>
+      
+      <div>
+      <p:column>
+      <p:outputLabel>Password  </p:outputLabel>
+      <p:inputText id="input-ps" value="#{clientBean.client.password}"  required="true"  requiredMessage="This field is required."/>
+      <p:message for="input-ps"/>
+      </p:column>
+      </div>
+      
+      <div>
+      <p:column>
+      <p:outputLabel>Phone Number  </p:outputLabel>
+      <p:inputText id="input-pn" value="#{clientBean.client.phonenumber}"  required="true"  requiredMessage="This field is required."/>
+      <p:message for="input-pn"/>
+      </p:column>
+      </div>
+      
+      <div>
+      <p:column>
+      <p:outputLabel>Card number (optional payment type)  </p:outputLabel>
+      <p:inputText id="input-cn" value="#{clientBean.client.cardnumber}"   />
+
+      </p:column>
+      </div>
+ 
+   
+      <div>
+      <p:column>
+      <p:commandButton update="@form"  value="Save" action="#{clientBean.register}" /> 
+      </p:column>
+      </div>
+				
+			</h:form>
+
+
+</h:body>
+</html>
